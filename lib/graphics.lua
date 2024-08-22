@@ -19,9 +19,24 @@ function cls(col) end
 function print(value, x, y, col) end
 
 --- Draws a sprite on the screen
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#spr)
 --- @param s integer | userdata
 --- @param x? integer
 --- @param y? integer
 --- @param flip_x? boolean
 --- @param flip_y? boolean
 function spr(s, x, y, flip_x, flip_y) end
+
+--- Sets the clipping rectangle for drawing operations.
+--- If clip_previous is set, the new region will be clipped by the old region
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#clip)
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
+--- @param clip_previous? boolean
+function clip(x, y, w, h, clip_previous) end
+
+--- Reset clipping region
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#clip)
+function clip() end

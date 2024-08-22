@@ -10,6 +10,7 @@ function printh(value) end
 function tostr(value, as_hex) end
 
 --- Splits a string on a separator
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#split)
 --- @param str string
 --- @param separator? string
 --- @param convert_numbers? boolean
@@ -17,6 +18,7 @@ function tostr(value, as_hex) end
 function split(str, separator, convert_numbers) end
 
 --- Add an element to a table
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#add)
 --- @param table table
 --- @param value any
 --- @param index? number

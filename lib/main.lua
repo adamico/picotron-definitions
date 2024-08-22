@@ -1,6 +1,6 @@
 --- @meta
 
---- Environment properties
+--- Environment Properties
 --- @class __Environment
 --- @field argv string[]
 --- @field parent_pid integer
