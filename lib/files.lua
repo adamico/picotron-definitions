@@ -8,6 +8,7 @@
 __FileMetadata = {}
 
 --- Change the current working directory
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#cd)
 --- @param path string
 function cd(path) end
 
