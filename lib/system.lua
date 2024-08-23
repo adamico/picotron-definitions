@@ -2,13 +2,13 @@
 
 --- Environment Properties
 --- @class __Environment
---- @field argv? string[]
---- @field parent_pid? integer
---- @field path? string
---- @field print_to_proc_id? integer
---- @field prog_name? string
---- @field title? string
---- @field window_attribs? __WindowAttribs
+--- @field argv string[]
+--- @field parent_pid integer
+--- @field path string
+--- @field print_to_proc_id integer
+--- @field prog_name string
+--- @field title string
+--- @field window_attribs __WindowAttribs
 local __Environment = {}
 
 --- Window Attributes
