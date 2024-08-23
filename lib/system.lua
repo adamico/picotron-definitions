@@ -28,3 +28,31 @@ function printh(value) end
 --- @param filename string
 --- @param env? __Environment
 function create_process(filename, env) end
+
+--- Stop the cart and optionally print a message
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#stop)
+--- @param message? string
+function stop(message) end
+
+--- If condition is false, stop the cart and print a message
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#assert)
+--- @param condition boolean
+--- @param message? string
+function assert(condition, message) end
+
+--- Get the number of seconds elapsed since the cartridge was run
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#time)
+--- @return number
+function time() end
+
+--- Get the number of seconds elapsed since the cartridge was run
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#t)
+--- @return number
+function t() end
+
+--- Get the current date and time formatted using Lua's standard date strings
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#date)
+--- @param format string
+--- @param t? integer | string
+--- @param delta? number
+function date(format, t, delta) end
