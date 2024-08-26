@@ -80,6 +80,11 @@ function fetch_metadata(filename) end
 --- @param metadata __FileMetadata
 function store_metadata(filename, metadata) end
 
+--- Create a directory
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#mkdir)
+--- @param name string
+function mkdir(name) end
+
 -- --- @param filename string
 -- function include(filename)
 --     require(filename)
