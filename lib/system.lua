@@ -2,13 +2,14 @@
 
 --- Environment Properties
 --- @class __Environment
---- @field argv string[]
---- @field parent_pid integer
---- @field path string
---- @field print_to_proc_id integer
---- @field prog_name string
---- @field title string
---- @field window_attribs __WindowAttribs
+--- @field argv? string[]
+--- @field immortal? boolean
+--- @field parent_pid? integer
+--- @field path? string
+--- @field print_to_proc_id? integer
+--- @field prog_name? string
+--- @field title? string
+--- @field window_attribs? __WindowAttribs
 local __Environment = {}
 
 --- Gets the environment variables given to the process at its creation
@@ -17,7 +18,7 @@ local __Environment = {}
 function env() end
 
 --- Exits the program
---- @param exit_code integer
+--- @param exit_code? integer
 function exit(exit_code) end
 
 --- Prints text to the host system's console
@@ -56,3 +57,16 @@ function t() end
 --- @param t? integer | string
 --- @param delta? number
 function date(format, t, delta) end
+
+--- Set the system clipboard
+--- @param text string
+function set_clipboard(text) end
+
+--- Get the system clipboard
+--- @return string
+function get_clipboard() end
+
+--- Adds an event listener
+--- @param event string
+--- @param callback function
+function on_event(event, callback) end
