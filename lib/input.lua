@@ -26,7 +26,7 @@ function btnp(button, player) end
 --- If raw is set, ignore the keyboard layout
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#key)
 --- @param k string
---- @param raw boolean
+--- @param raw? boolean
 --- @return boolean
 function key(k, raw) end
 
@@ -34,7 +34,7 @@ function key(k, raw) end
 --- If raw is set, ignore the keyboard layout
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#keyp)
 --- @param k string
---- @param raw boolean
+--- @param raw? boolean
 --- @return boolean
 function keyp(k, raw) end
 
