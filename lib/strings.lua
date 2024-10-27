@@ -21,11 +21,13 @@ function ord(str, index, num_results) end
 --- @param str string
 --- @param pos0 integer
 --- @param pos1? integer | boolean
+--- @return string
 function sub(str, pos0, pos1) end
 
 --- Converts a value to a string
 --- @param value number
 --- @param as_hex? boolean
+--- @return string
 function tostr(value, as_hex) end
 
 --- Splits a string on a separator
