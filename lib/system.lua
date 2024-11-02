@@ -70,3 +70,7 @@ function get_clipboard() end
 --- @param event string
 --- @param callback function
 function on_event(event, callback) end
+
+--- Get the current process id
+--- @return integer
+function pid() end
