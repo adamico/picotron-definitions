@@ -27,3 +27,17 @@ function mid(x, y, z) end
 --- @param x number
 --- @return integer
 function flr(x) end
+
+--- Generate a random number under the given limit
+--- or a random element from the table
+--- [View Online](https://pico-8.fandom.com/wiki/Rnd)
+--- @param limit number
+--- @return number
+function rnd(limit) end
+
+--- Generate a random number under the given limit
+--- or a random element from the table
+--- [View Online](https://pico-8.fandom.com/wiki/Rnd)
+--- @param tbl table
+--- @return any
+function rnd(tbl) end
