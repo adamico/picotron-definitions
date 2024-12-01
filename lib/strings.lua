@@ -9,8 +9,8 @@ function chr(val, ...) end
 --- Convert 1 or more characters from a string to ordinal character codes
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#ord)
 --- @param str string
---- @param index integer
---- @param num_results integer
+--- @param index? integer
+--- @param num_results? integer
 --- @return (integer | nil) ...
 function ord(str, index, num_results) end
 
