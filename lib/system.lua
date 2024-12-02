@@ -56,7 +56,7 @@ function t() end
 
 --- Get the current date and time formatted using Lua's standard date strings
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#date)
---- @param format string
+--- @param format? string
 --- @param t? integer | string
 --- @param delta? number
 function date(format, t, delta) end
