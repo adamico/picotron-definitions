@@ -77,3 +77,7 @@ function on_event(event, callback) end
 --- Get the current process id
 --- @return integer
 function pid() end
+
+--- Create a notification toast
+--- @param message string
+function notify(message) end
