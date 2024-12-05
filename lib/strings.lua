@@ -34,8 +34,8 @@ function tostr(value, as_hex) end
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#split)
 --- @param str string
 --- @param separator? string
---- @param convert_numbers? boolean
---- @return (string | number)[]
+--- @param convert_numbers? true
+--- @return number[]
 function split(str, separator, convert_numbers) end
 
 --- Splits a string on a separator
