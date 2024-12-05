@@ -9,7 +9,7 @@
 --- 12 13       Buttons (not named yet!)
 --- 14 15       SL SR
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#btn)
---- @param button? integer
+--- @param button integer
 --- @param player? integer
 --- @return number | false
 function btn(button, player) end
@@ -18,7 +18,7 @@ function btn(button, player) end
 --- By default, a button press repeats after 30 frames, and once again every 8 frames
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#btnp)
 --- @param button integer
---- @param player integer
+--- @param player? integer
 --- @return number | false
 function btnp(button, player) end
 
