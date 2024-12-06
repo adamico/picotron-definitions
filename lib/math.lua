@@ -42,3 +42,9 @@ function rnd(limit) end
 --- @param tbl table
 --- @return any
 function rnd(tbl) end
+
+--- Converts a value to a number
+--- @param val any
+--- @param format_flags? integer
+--- @return number
+function tonum(val, format_flags) end
