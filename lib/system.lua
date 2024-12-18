@@ -12,8 +12,9 @@
 --- @field window_attribs? __WindowAttribs
 local __Environment = {}
 
---- @type any
-_ENV = {}
+-- Defining _ENV causes these definitions in system.lua to be ignored
+-- @type any
+-- _ENV = {}
 
 --- Gets the environment variables given to the process at its creation
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#env)
