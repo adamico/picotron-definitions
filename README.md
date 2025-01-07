@@ -20,7 +20,7 @@ apply_delta()
 clear_key(scancode)
 create_delta()
 create_meta_key(k)
-create_undo_stack()
+create_undo_stack() -- needs documentation
 flip(flags)
 mount(a, b)
 pack()
