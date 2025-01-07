@@ -38,6 +38,11 @@ function key(k, raw) end
 --- @return boolean
 function keyp(k, raw) end
 
+--- Reset the state of a key until the end of frame
+--- View implementation in /system/lib/events.lua
+--- @param k string
+function clear_key(k) end
+
 --- Check if text is waiting to be read with `readtext()`
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#peektext)
 --- @return boolean
