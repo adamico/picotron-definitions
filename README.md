@@ -3,7 +3,7 @@ Definition files for Picotron for use with Lua Language Server
 
 ## How To Use
 
-Place `.luarc.json` in the root of the project. Change the `workspace.library` path to point to the `lib/` folder in this repo (or copy the `lib/` folder in this repo to `~/.local/lib/picotron-definitions`).
+Place `example.luarc.json` in the root of the project (rename it to `.luarc.json`). Change the `workspace.library` path to point to the `lib/` folder in this repo (or copy the `lib/` folder in this repo to `~/.local/lib/picotron-definitions`).
 
 ## See Also
 
