@@ -3,6 +3,7 @@
 --- @class userdata
 --- @field x number
 --- @field y number
+--- @field z number
 userdata = {}
 
 --- Creates a userdata
