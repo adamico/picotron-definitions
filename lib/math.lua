@@ -22,11 +22,17 @@ function max(x, y) end
 --- @return number
 function mid(x, y, z) end
 
---- Floor a number
+--- Returns the nearest integer at or below a number
 --- [View Online](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#FLR)
 --- @param x number
 --- @return integer
 function flr(x) end
+
+--- Returns the nearest integer at or above a number
+--- [View Online](https://pico-8.fandom.com/wiki/Ceil)
+--- @param val number
+--- @return integer
+function ceil(val) end
 
 --- Generate a random number under the given limit
 --- or a random element from the table
