@@ -82,3 +82,13 @@ function pid() end
 --- Create a notification toast
 --- @param message string
 function notify(message) end
+
+-- should stat(n) return any? i think it always returns a number, but that might not always be true
+
+--- Returns information about the current runtime environment
+--- If addr is specified, copy the result to addr. This isn't fully documented, see [Querying Mixer State](https://pico-8.fandom.com/wiki/Stat?fandom=allow)
+--- [View Online](https://pico-8.fandom.com/wiki/Stat)
+--- @param id integer
+--- @param addr? integer
+--- @returns any
+function stat(id, addr) end
