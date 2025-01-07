@@ -92,3 +92,8 @@ function notify(message) end
 --- @param addr? integer
 --- @returns any
 function stat(id, addr) end
+
+--- Get a property from the current theme (/ram/shared/theme.pod)
+--- @param which string
+--- @return any
+function theme(which) end
