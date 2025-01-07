@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class userdata
+--- @field x number
+--- @field y number
 userdata = {}
 
 --- Creates a userdata
