@@ -211,10 +211,10 @@ function fillp(p, ...) end
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#get_spr)
 --- @param index integer
 --- @return userdata
-function get_sprite(index) end
+function get_spr(index) end
 
 --- Set the sprite for a given index
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#set_spr)
 --- @param index integer
 --- @param ud userdata
-function set_sprite(index, ud) end
+function set_spr(index, ud) end
