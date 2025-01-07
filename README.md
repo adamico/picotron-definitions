@@ -17,7 +17,6 @@ This list was generated using [Enview](https://www.lexaloffle.com/bbs/?pid=14389
 
 ```
 apply_delta()
-blit()
 clear_key(scancode)
 create_delta()
 create_meta_key(k)

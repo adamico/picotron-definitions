@@ -147,6 +147,21 @@ function set(u, x, ...) end
 --- @param ... number
 function set(u, x, y, ...) end
 
+--- Copy a region of one userdata to another
+--- Both src and dest must be the same type.
+--- src and dest default to the current draw target.
+--- width and height default to the src width and height.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#blit)
+--- @param src? userdata
+--- @param dest? userdata
+--- @param src_x? integer
+--- @param src_y? integer
+--- @param dest_x? integer
+--- @param dest_y? integer
+--- @param width? integer
+--- @param height? integer
+function blit(src, dest, src_x, src_y, dest_x, dest_y, width, height) end
+
 --- @class userdata
 --- @return userdata | nil
 --- Get a row of a 2d userdata
@@ -242,3 +257,206 @@ function userdata:peek(addr, offset, elements) end
 --- Write to RAM from an integer typed userdata
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_poke)
 function userdata:poke(addr, offset, elements) end
+
+--- Copy a region of one userdata to another
+--- Both src and dest must be the same type.
+--- dest defaults to the current draw target.
+--- width and height default to the src width and height.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_blit)
+--- @param dest? userdata
+--- @param src_x? integer
+--- @param src_y? integer
+--- @param dest_x? integer
+--- @param dest_y? integer
+--- @param width? integer
+--- @param height? integer
+function userdata:blit(dest, src_x, src_y, dest_x, dest_y, width, height) end
+
+--- Change the type or size of a userdata. Only integer types can be used.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_mutate)
+--- @param data_type string u8, i16, i32, i64
+--- @param width? integer
+--- @param height? integer
+function userdata:mutate(data_type, width, height) end
+
+--- Linearly interpolate between two elements of a userdata
+--- offset is the flat index to start from
+--- len is the length (x1 - x0) of the lerp including the end (but not the start) element
+--- el_stride is the distance between the elements
+--- Multiple lerps can be performed at once using num_lerps and lerp_stride
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_lerp)
+--- @param offset? integer
+--- @param len? integer
+--- @param el_stride? integer
+--- @param num_lerps? integer
+--- @param lerp_stride? integer
+function userdata:lerp(offset, len, el_stride, num_lerps, lerp_stride) end
+
+--- Return a copy of userdata cast as a different type.
+--- When converting to ints, f64 values are floored and out of range values overflow
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_convert)
+--- @param data_type string u8, i16, i32, i64, f64
+--- @param dest? userdata
+--- @return userdata
+function userdata:convert(data_type, dest) end
+
+--- Sort a 2d userdata of any type by the value found at the index column (0 by default)
+--- When descending is true, sort from largest to smallest
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_sort)
+--- @param index? integer
+--- @param descending? boolean
+function userdata:sort(index, descending) end
+
+-- === Userdata Operations ===
+
+--- Applies add to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:add(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Applies sub to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:sub(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Applies mul to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:mul(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Applies div to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:div(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Applies mod to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:mod(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Applies band to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:band(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Applies bor to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:bor(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Applies bxor to each element and written to a new userdata
+--- If dest is userdata, result will be written to dest. If dest is true, result will be written to self
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:bxor(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Copy the userdata
+--- Equivalent to userdata:add(0, ...) when src is nil
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#UserData_Operations)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:copy(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Returns the largest of each element or scalar
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#UserData_Operations)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:max(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+--- Returns the smallest of each element or scalar
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#UserData_Operations)
+--- @param src? userdata | number
+--- @param dest? userdata | boolean
+--- @param src_offset? integer
+--- @param dest_offset? integer
+--- @param len? integer
+--- @param src_stride? integer
+--- @param dest_stride? integer
+--- @param spans? integer
+--- @return userdata
+function userdata:min(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
