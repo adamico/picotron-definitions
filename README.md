@@ -20,7 +20,6 @@ apply_delta()
 create_delta()
 create_meta_key(k)
 create_undo_stack() -- needs documentation
-flip(flags)
 mount(a, b)
 pack()
 send_message()

@@ -218,3 +218,8 @@ function get_spr(index) end
 --- @param index integer
 --- @param ud userdata
 function set_spr(index, ud) end
+
+--- Copies the graphics buffer to the screen, then syncronizes to the next frame
+--- [View Online](https://pico-8.fandom.com/wiki/Flip)
+--- @param flags? integer
+function flip(flags) end
