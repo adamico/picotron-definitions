@@ -50,17 +50,20 @@ function peektext() end
 function readtext(clear) end
 
 --- Gets the current location and state of the mouse
+--- If new_mx and new_my are set, move the mouse to that position
 --- mouse_b is a bitfield.
 ---     0x1 means left mouse button
 ---     0x2 means right mouse button
 ---     0x4 means middle mouse button
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#mouse)
+--- @param new_mx? number
+--- @param new_my? number
 --- @return number mouse_x
 --- @return number mouse_y
 --- @return integer mouse_b
 --- @return number wheel_x
 --- @return number wheel_y
-function mouse() end
+function mouse(new_mx, new_my) end
 
 --- Requests to capture the mouse to control speed and move_sensitivity
 --- event_sensitivity determines how fast dx and dy change
