@@ -89,3 +89,9 @@ function mkdir(name) end
 -- function include(filename)
 --     require(filename)
 -- end
+
+--- Mounts a folder. Creates a link from origin to target
+--- View implementation in /system/lib/fs.lua
+--- @param target string
+--- @param origin string
+function mount(target, origin) end
