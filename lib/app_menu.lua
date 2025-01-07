@@ -10,6 +10,7 @@
 local __MenuItem = {}
 
 --- Adds a menu item
+--- If m is nil, reset the menu
 --- View implementation in /system/lib/app_menu.lua
 --- @param m? __MenuItem
 function menuitem(m) end
