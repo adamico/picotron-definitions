@@ -49,8 +49,52 @@ function rnd(limit) end
 --- @return any
 function rnd(tbl) end
 
+--- Initializes the random number generator with an explicit seed value
+--- [View Online](https://pico-8.fandom.com/wiki/Srand)
+--- @param val number
+function srand(val) end
+
 --- Converts a value to a number
 --- @param val any
 --- @param format_flags? integer
 --- @return number
 function tonum(val, format_flags) end
+
+--- Returns the absolute value of a number
+--- [View Online](https://pico-8.fandom.com/wiki/Abs)
+--- @param n number
+--- @return number
+function abs(n) end
+
+--- Returns the sign of a number. 1 for positive, -1 for negative
+--- [View Online](https://pico-8.fandom.com/wiki/Sgn)
+--- @param n number
+--- @return -1 | 1
+function sgn(n) end
+
+--- Calculates the arctangent of dx/dy formed by the vector on the unit circle.
+--- The result is adjusted to represent the full circle.
+--- [View Online](https://pico-8.fandom.com/wiki/Atan2)
+function atan2(dx, dy) end
+
+--- Calculates the sin of an angle
+--- Uses a range of 0.0 to 1.0 to represent the angle. Sometimes called turns.
+--- Example: 180 degrees or pi radians is 0.5 turns.
+--- [View Online](https://pico-8.fandom.com/wiki/Sin)
+--- @param angle number
+--- @return number
+function sin(angle) end
+
+--- Calculates the sin of an angle
+--- Uses a range of 0.0 to 1.0 to represent the angle. Sometimes called turns.
+--- Example: 180 degrees or pi radians is .5 turns.
+--- [View Online](https://pico-8.fandom.com/wiki/Cos)
+--- @param angle number
+--- @return number
+function cos(angle) end
+
+--- Calculates the square root of a number
+--- [View Online](https://pico-8.fandom.com/wiki/Sqrt)
+--- @param n number
+--- @return number
+function sqrt(n) end
