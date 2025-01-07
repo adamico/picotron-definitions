@@ -8,3 +8,38 @@ Place `.luarc.json` in the root of the project. Change the `workspace.library` p
 ## See Also
 
 [pico-api](https://github.com/ahai64/pico-api) is a similar project that provides Lua LS definition files for Picotron and Pico8.
+
+## TODO
+
+These are functions that are defined in Picotron, but are not included in Picotron Definitions yet.
+
+This list was generated using [Enview](https://www.lexaloffle.com/bbs/?pid=143894)
+
+```
+abs()
+apply_delta()
+atan2()
+blit()
+clear_key(scancode)
+cos()
+create_delta()
+create_meta_key(k)
+create_undo_stack()
+flip(flags)
+menuitem(m, a, b)
+mount(a, b)
+music()
+note()
+pack()
+pwf()
+send_message()
+sfx()
+sgn()
+sin()
+sqrt()
+srand()
+theme(which)
+tokenoid()
+unpack()
+wrangle_working_file(save_state, load_state, untitled_filename, get_hlocation, set_hlocation)
+```
