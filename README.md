@@ -20,7 +20,5 @@ apply_delta()
 create_delta()
 create_meta_key(k)
 create_undo_stack() -- needs documentation
-pack()
 tokenoid()
-unpack()
 ```

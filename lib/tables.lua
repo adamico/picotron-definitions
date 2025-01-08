@@ -43,3 +43,12 @@ function all(table) end
 function foreach(table, func) end
 
 -- pairs and ipairs are builtin to lua, so there's no need to specify them here
+
+--- Alias for table.pack
+--- @param ... any
+function pack(...) end
+
+--- Alias for table.unpack
+--- @param tbl table
+--- @return any ...
+function unpack(tbl) end
