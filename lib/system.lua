@@ -75,6 +75,11 @@ function get_clipboard() end
 --- @param callback function
 function on_event(event, callback) end
 
+--- Sends an event to a process
+--- @param pid integer
+--- @param event table
+function send_message(pid, event) end
+
 --- Get the current process id
 --- @return integer
 function pid() end
