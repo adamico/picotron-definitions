@@ -1,5 +1,44 @@
 --- @meta
 
+--- @class string
+string = {}
+
+--- Get the extension of a file
+--- Assumes string is a path
+--- View implementation in /system/lib/head.lua
+--- @return string
+function string:ext() end
+
+--- Get the basename (filename and extension) of a file
+--- Assumes string is a path
+--- View implementation in /system/lib/head.lua
+--- @return string
+function string:basename() end
+
+--- Get the path of a file
+--- Assumes string is a path
+--- View implementation in /system/lib/head.lua
+--- @return string
+function string:path() end
+
+--- Get the hloc(?) of a file
+--- Assumes string is a path
+--- View implementation in /system/lib/head.lua
+--- @return string
+function string:hloc() end
+
+--- Get the directory of a file
+--- Assumes string is a path
+--- View implementation in /system/lib/head.lua
+--- @return string
+function string:dirname() end
+
+--- Get the protocol (e.g. http) of a file
+--- Assumes string is a path
+--- View implementation in /system/lib/head.lua
+--- @return string
+function string:prot() end
+
 --- Converts 1 or more ordinal character codes to a string
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#chr)
 --- @param val integer
