@@ -60,6 +60,7 @@ function t() end
 --- @param format? string
 --- @param t? integer | string
 --- @param delta? number
+--- @return string
 function date(format, t, delta) end
 
 --- Set the system clipboard
