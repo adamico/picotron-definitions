@@ -96,7 +96,7 @@ function notify(message) end
 --- [View Online](https://pico-8.fandom.com/wiki/Stat)
 --- @param id integer
 --- @param addr? integer
---- @returns any
+--- @return any
 function stat(id, addr) end
 
 --- Get a property from the current theme (/ram/shared/theme.pod)
