@@ -16,6 +16,13 @@ function btn(button, player) end
 
 --- Get the state of a button held down.
 --- By default, a button press repeats after 30 frames, and once again every 8 frames
+--- 0 1 2 3     LEFT RIGHT UP DOWN
+--- 5 6         Buttons: O X
+--- 7           MENU
+--- 8           reserved
+--- 9 10 11 12  Secondary Stick L,R,U,D
+--- 12 13       Buttons (not named yet!)
+--- 14 15       SL SR
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#btnp)
 --- @param button integer
 --- @param player? integer
