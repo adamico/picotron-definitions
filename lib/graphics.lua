@@ -56,14 +56,15 @@ function pget(x, y) end
 -- function sget(x, y) end
 
 --- Get the value of a sprite n's flag f (0-7)
----@param n integer
----@param f integer
+--- @param n integer
+--- @param f integer
+--- @return boolean
 function fget(n, f) end
 
 --- Set the value of a sprite n's flag f (0-7)
----@param n integer
----@param f integer
----@param val boolean
+--- @param n integer
+--- @param f integer
+--- @param val boolean
 function fset(n, f, val) end
 
 --- Set the cursor position
