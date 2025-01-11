@@ -4,6 +4,7 @@
 --- 0 is 480x720
 --- 3 is 240x135
 --- 4 is 160x90
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#vid)
 --- @param mode 0 | 3 | 4
 function vid(mode) end
 
@@ -13,6 +14,7 @@ function vid(mode) end
 function cls(col) end
 
 --- Prints text on screen
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#print)
 --- @param value any
 --- @param x? integer
 --- @param y? integer
@@ -56,12 +58,14 @@ function pget(x, y) end
 -- function sget(x, y) end
 
 --- Get the value of a sprite n's flag f (0-7)
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#fget)
 --- @param n integer
 --- @param f integer
 --- @return boolean
 function fget(n, f) end
 
 --- Set the value of a sprite n's flag f (0-7)
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#fset)
 --- @param n integer
 --- @param f integer
 --- @param val boolean
@@ -189,6 +193,7 @@ function spr(s, x, y, flip_x, flip_y) end
 
 --- Stretch a source rectangle of a sprite (sx, sy, sw, sh) to a destination rectangle on the screen (dx, dy, dw, dh)
 --- (x, y) is the top left corner of the sprite. w and h are the width and height of the rectangle
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#sspr)
 --- @param s integer | userdata
 --- @param sx integer
 --- @param sy integer
