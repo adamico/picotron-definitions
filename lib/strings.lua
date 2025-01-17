@@ -84,3 +84,19 @@ function split(str, separator, convert_numbers) end
 --- @param convert_numbers? false
 --- @return string[]
 function split(str, separator, convert_numbers) end
+
+--- Create a string encoding all the information needed to get from str0 to str1.
+--- The delta can be used with apply_delta to produce str1 given only str0.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#create_delta)
+--- @param str0 string
+--- @param str1 string
+--- @return string
+function create_delta(str0, str1) end
+
+--- Apply a delta created with create_delta to str0. This will produce str1.
+--- str0 must be the exactly the same as the string used to create the delta; otherwise apply_delta returns nil.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#apply_delta)
+--- @param str0 string
+--- @param delta string
+--- @return string | nil
+function apply_delta(str0, delta) end

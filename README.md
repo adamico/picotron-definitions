@@ -16,8 +16,6 @@ These are functions that are defined in Picotron, but are not included in Picotr
 This list was generated using [Enview](https://www.lexaloffle.com/bbs/?pid=143894)
 
 ```
-apply_delta()
-create_delta()
 create_meta_key(k)
 create_undo_stack() -- needs documentation
 tokenoid()
