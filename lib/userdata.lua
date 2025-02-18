@@ -300,6 +300,14 @@ function userdata:lerp(offset, len, el_stride, num_lerps, lerp_stride) end
 --- @return userdata
 function userdata:convert(data_type, dest) end
 
+function userdata:pow() end
+
+function userdata:sgn() end
+
+function userdata:sgn0() end
+
+function userdata:abs() end
+
 --- Sort a 2d userdata of any type by the value found at the index column (0 by default)
 --- When descending is true, sort from largest to smallest
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_sort)
@@ -422,9 +430,11 @@ function userdata:bor(src, dest, src_offset, dest_offset, len, src_stride, dest_
 function userdata:bxor(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
 
 --- Copy the userdata
---- Equivalent to userdata:add(0, ...) when src is nil
---- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#UserData_Operations)
---- @param src? userdata | number
+--- When :copy is given a table as the first argument (after self), it is taken to be a
+--- lookup table into that userdata for the start of each span.
+--- ** this form will be deprecated in 0.1.2 -- use :take instead with the same parameters.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_copy)
+--- @param idx? userdata | number
 --- @param dest? userdata | boolean
 --- @param src_offset? integer
 --- @param dest_offset? integer
@@ -433,7 +443,11 @@ function userdata:bxor(src, dest, src_offset, dest_offset, len, src_stride, dest
 --- @param dest_stride? integer
 --- @param spans? integer
 --- @return userdata
-function userdata:copy(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+function userdata:copy(idx, dest, src_offset, dest_offset, len, idx_stride, dest_stride, spans) end
+
+--- Take values from the userdata at locations specified by idx.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_take)
+function userdata:take(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
 
 --- Returns the largest of each element or scalar
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#UserData_Operations)
