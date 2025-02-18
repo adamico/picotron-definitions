@@ -2,7 +2,7 @@
 
 --- @class __MenuItem
 --- @field id? integer Unique identifier, used to sort items (otherwise order added is used)
---- @field label? string User facing label
+--- @field label? string | function User facing label
 --- @field shortcut? string Drawn right justified in the menu
 --- @field greyed? boolean Greyed out item (use for ---)
 --- @field action? function Callback on select -- param b is the button pressed (left or right)
@@ -21,6 +21,6 @@ function menuitem(m) end
 --- action is a callback for when the item is pressed -- param b is the button pressed (left or right)
 --- View implementation in /system/lib/app_menu.lua
 --- @param id integer
---- @param label string
+--- @param label string | function
 --- @param action function
 function menuitem(id, label, action) end
