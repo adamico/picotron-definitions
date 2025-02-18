@@ -103,3 +103,7 @@ function stat(id, addr) end
 --- @param which string
 --- @return any
 function theme(which) end
+
+--- Opens a file using the system file associations (/system/util/open.lua)
+--- @param file string
+function open(file) end
