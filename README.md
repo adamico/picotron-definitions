@@ -19,4 +19,8 @@ This list was generated using [Enview](https://www.lexaloffle.com/bbs/?pid=14389
 create_meta_key(k)
 create_undo_stack() -- needs documentation
 tokenoid()
+userdata:abs()
+userdata:pow()
+userdata:sgn()
+userdata:sgn0()
 ```
