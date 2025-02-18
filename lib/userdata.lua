@@ -439,7 +439,7 @@ function userdata:bxor(src, dest, src_offset, dest_offset, len, src_stride, dest
 --- @param src_offset? integer
 --- @param dest_offset? integer
 --- @param len? integer
---- @param src_stride? integer
+--- @param idx_stride? integer
 --- @param dest_stride? integer
 --- @param spans? integer
 --- @return userdata
