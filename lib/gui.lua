@@ -1,25 +1,32 @@
 --- @meta
 
---- @class __GUI
---- @field height integer
---- @field height_rel integer
---- @field width integer
---- @field width_rel integer
---- @field x integer
---- @field y integer
---- @field z integer
+--- @class __GUI_PROPS
+--- @field height? integer
+--- @field height_rel? integer
+--- @field width? integer
+--- @field width_rel? integer
+--- @field x? integer
+--- @field y? integer
+--- @field z? integer
+--- @field click? function
+--- @field release? function
+--- @field tap? function
+--- @field update? function
+--- @field draw? function
+__GUI_PROPS = {}
+
+--- @class __GUI: __GUI_PROPS
 __GUI = {}
 
---- @class __GUI_ED: __GUI
---- @field height integer
---- @field height_rel? integer
---- @field width integer
---- @field width_rel? integer
---- @field bgcol integer
---- @field fgcol integer
+--- @class __GUI_ED_PROPS: __GUI_PROPS
+--- @field bgcol? integer
+--- @field fgcol? integer
+__GUI_ED_PROPS = {}
+
+--- @class __GUI_ED: __GUI_ED_PROPS
 __GUI_ED = {}
 
---- @param head_el? __GUI
+--- @param head_el? __GUI_PROPS
 --- @return __GUI
 --- Create a GUI
 function create_gui(head_el) end
@@ -38,7 +45,12 @@ function __GUI:update_all() end
 function __GUI:set_keyboard_focus(focus) end
 
 --- @class __GUI
---- @param head_el? __GUI_ED
+--- @param head_el __GUI_PROPS
+--- @return __GUI
+function __GUI:attach(head_el) end
+
+--- @class __GUI
+--- @param head_el? __GUI_ED_PROPS
 --- @return __GUI_ED
 --- Attaches a text editor to the GUI
 function __GUI:attach_text_editor(head_el) end
