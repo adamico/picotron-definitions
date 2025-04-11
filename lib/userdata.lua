@@ -8,18 +8,14 @@ userdata = {}
 
 --- Creates a userdata
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata)
---- @param data_type string u8, i16, i32, i64, f64
+--- @param data_type "u8"|"i16"|"i32"|"i64"|"f64" The primitive type of the userdata's numbers
 --- @param width integer
---- @param height? integer
+--- @param height integer
 --- @param data? string string of hex values encoding the data or comma separated list of floats
 --- @return userdata
+--- @overload fun(data_type: "u8"|"i16"|"i32"|"i64"|"f64", width: integer, data: string?): userdata
+--- @overload fun(data: string): userdata
 function userdata(data_type, width, height, data) end
-
---- Creats a userdata from a Pico-8 graphics string
---- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata)
---- @param data string
---- @return userdata
-function userdata(data) end
 
 --- Creates a vector (f64, 1d userdata)
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#vec)
