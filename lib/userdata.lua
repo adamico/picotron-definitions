@@ -4,6 +4,10 @@
 --- @field x number
 --- @field y number
 --- @field z number
+--- @operator add(userdata|number):userdata
+--- @operator sub(userdata|number):userdata
+--- @operator mul(userdata|number):userdata
+--- @operator div(userdata|number):userdata
 userdata = {}
 
 --- Creates a userdata
