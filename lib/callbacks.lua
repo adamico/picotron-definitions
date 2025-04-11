@@ -4,7 +4,7 @@
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#Program_Stucture)
 function _init() end
 
---- Called 60 times per second, provided that `_update` function does not exceed ~90% CPU
+--- Called 60 times per second, provided that the `_update` function does not exceed ~90% CPU
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#Program_Stucture)
 function _update() end
 
