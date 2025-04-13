@@ -57,8 +57,8 @@ function pwd() end
 --- Read a lua object from a file
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#fetch)
 --- @param filename string
---- @return table | string | userdata | boolean | number | nil
---- @return __FileMetadata | nil
+--- @return any
+--- @return __FileMetadata?
 function fetch(filename) end
 
 --- Store a lua object to a file
