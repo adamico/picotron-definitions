@@ -95,3 +95,9 @@ function mkdir(name) end
 --- @param target string
 --- @param origin string
 function mount(target, origin) end
+
+--- Loads and runs a lua file like a function.
+--- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#include)
+--- @param filename string The path to the file relative to the working directory. Must include the file extension.
+--- @return any? #The return value of the file, if any.
+function include(filename) end
