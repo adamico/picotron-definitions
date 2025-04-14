@@ -63,10 +63,10 @@ function ord(str, index, num_results) end
 --- @return string
 function sub(str, pos0, pos1) end
 
---- Converts a value to a string
---- @param value number
---- @param as_hex? boolean
---- @return string
+--- Converts a value to a string.
+--- @param value any The value to convert.
+--- @param as_hex? boolean If true, numbers will be converted to a hexidecimal string. Non-numbers will convert to 0x0. Decimal numbers will error.
+--- @return string The string representation of the value.
 function tostr(value, as_hex) end
 
 --- Splits a string on a separator
