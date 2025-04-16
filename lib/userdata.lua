@@ -4,22 +4,24 @@
 --- @field x number
 --- @field y number
 --- @field z number
+--- @operator add(userdata|number):userdata
+--- @operator sub(userdata|number):userdata
+--- @operator mul(userdata|number):userdata
+--- @operator div(userdata|number):userdata
 userdata = {}
+
+--- @alias userdata_type "u8"|"i16"|"i32"|"i64"|"f64"
 
 --- Creates a userdata
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata)
---- @param data_type string u8, i16, i32, i64, f64
+--- @param data_type userdata_type The primitive type of the userdata's numbers
 --- @param width integer
---- @param height? integer
+--- @param height integer
 --- @param data? string string of hex values encoding the data or comma separated list of floats
 --- @return userdata
+--- @overload fun(data_type: userdata_type, width: integer, data: string?): userdata
+--- @overload fun(data: string): userdata
 function userdata(data_type, width, height, data) end
-
---- Creats a userdata from a Pico-8 graphics string
---- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata)
---- @param data string
---- @return userdata
-function userdata(data) end
 
 --- Creates a vector (f64, 1d userdata)
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#vec)
@@ -79,39 +81,23 @@ function userdata:height() end
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_attribs)
 function userdata:attribs() end
 
---- @class userdata
---- @param x integer
---- @param n integer
---- @return number ...
---- Get n values starting at x, or 0 if out of range
---- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_get)
-function userdata:get(x, n) end
-
---- @class userdata
---- @param x integer
---- @param y integer
---- @param n integer
---- @return number ...
---- Get n values starting at x, y, or 0 if out of range
---- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_get)
-function userdata:get(x, y, n) end
-
---- Get n values starting at x, or 0 if out of range
+--- Gets values from a userdata as a multiple value return. If no index and no count are specified,
+--- it will return all values in flat-indexed order.
+--- If only an index is specified, it will return the value at that index. If the starting index
+--- is out of range, it will return a single 0. If not, any additional values that are not in range will each be returned as 0.
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_get)
 --- @param u userdata
---- @param x integer
---- @param n integer
---- @return number ...
-function get(u, x, n) end
-
---- Get n values starting at x, y, or 0 if out of range
---- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_get)
---- @param u userdata
---- @param x integer
---- @param y integer
---- @param n integer
---- @return number ...
+--- @param x integer The x index to start from
+--- @param y integer The y index to start from
+--- @param n integer The number of flat-indexed values to get
+--- @return number ... Each value from the starting index in flat-indexed order
+--- @overload fun(u: userdata, x: integer, n: integer): number ...
+--- @overload fun(u: userdata, x: integer, y: integer): number
+--- @overload fun(u: userdata, x: integer): number
+--- @overload fun(u: userdata): number ...
 function get(u, x, y, n) end
+
+userdata.get = get
 
 --- @class userdata
 --- @param x integer
