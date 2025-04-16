@@ -191,20 +191,19 @@ function palt(c) end
 --- @param flip_y? boolean
 function spr(s, x, y, flip_x, flip_y) end
 
---- Stretch a source rectangle of a sprite (sx, sy, sw, sh) to a destination rectangle on the screen (dx, dy, dw, dh)
---- (x, y) is the top left corner of the sprite. w and h are the width and height of the rectangle
+--- Crops a sprite to a source rectangle and draws it stretched to fit a destination rectangle on the current draw target.
 --- [View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#sspr)
---- @param s integer | userdata
---- @param sx integer
---- @param sy integer
---- @param sw integer
---- @param sh integer
---- @param dx integer
---- @param dy integer
---- @param dw? integer
---- @param dh? integer
---- @param flip_x? boolean
---- @param flip_y? boolean
+--- @param s integer | userdata The sprite to draw. This can be a sprite index or a u8 userdata object.
+--- @param sx? integer The x coordinate of the top left corner of the source rectangle. Defaults to 0.
+--- @param sy? integer The y coordinate of the top left corner of the source rectangle. Defaults to 0.
+--- @param sw? integer The width of the source rectangle. Defaults to the width of the sprite.
+--- @param sh? integer The height of the source rectangle. Defaults to the height of the sprite.
+--- @param dx? integer The x coordinate of the top left corner of the destination rectangle. Defaults to 0.
+--- @param dy? integer The y coordinate of the top left corner of the destination rectangle. Defaults to 0.
+--- @param dw? integer The width of the destination rectangle. Defaults to sw.
+--- @param dh? integer The height of the destination rectangle. Defaults to sh.
+--- @param flip_x? boolean Whether to flip the sprite horizontally. Defaults to false.
+--- @param flip_y? boolean Whether to flip the sprite vertically. Defaults to false.
 function sspr(s, sx, sy, sw, sh, dx, dy, dw, dh, flip_x, flip_y) end
 
 --- Set a 4x4 fill pattern using Pico-8 style fill patterns
